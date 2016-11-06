@@ -16,7 +16,7 @@ spambase_dataset = tf.contrib.learn.datasets.base.load_csv_with_header(
     target_dtype=np.int,
     features_dtype=np.float32)
 
-# Split dataset to train and test sets (randomly)
+# Split dataset to train (.7) and test (.3) sets (randomly)
 X_train, X_test, y_train, y_test = train_test_split(spambase_dataset.data,
                                                     spambase_dataset.target,
                                                     test_size=0.3)
